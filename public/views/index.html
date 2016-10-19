@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Star Wars Stuff</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+  </head>
+  <body ng-app="starWarsApp" ng-controller="MainController as main">
+    <select ng-model="main.selected" ng-change="main.getFilmData()">
+      <option ng-repeat="film in main.films" ng-value="film.url">{{film.title}}</option>
+    </select>
+    <main ng-class="main.class">
+      <p ng-repeat="line in main.lines track by $index">{{line}}</p>
+    </main>
+  </body>
+</html>
