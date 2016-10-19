@@ -2,7 +2,7 @@ var app = angular.module('starWarsApp', []);
 
 app.controller('MainController', MainController);
 
-var API = 'http://swapi.co/api';
+var API = 'https://swapi.co/api';
 
 function MainController($http) {
   var main = this;
