@@ -16,3 +16,7 @@ main {
 .scroll {
   transform: translateY(-200%);
 }
+
+.no-scroll {
+  transition: transform 0s linear;
+}

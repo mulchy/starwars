@@ -12,7 +12,7 @@ function MainController($http) {
   main.lines = [];
   main.getFilmData = function() {
     main.lines = [];
-    main.class = '';
+    main.class = 'no-scroll';
     $http.get(main.selected)
          .then(function(response) {
            main.lines = response.data.opening_crawl.split('\n');
