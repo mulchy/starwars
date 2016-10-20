@@ -21,7 +21,7 @@ function MainController($http) {
          });
   };
 
-  $http.get(API + '/films')
+  $http.get(API + '/films/')
        .then(function(response){
          console.log('response', response);
          main.films = response.data.results;
