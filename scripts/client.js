@@ -13,7 +13,8 @@ function MainController($http) {
   main.getFilmData = function() {
     main.lines = [];
     main.class = 'no-scroll';
-    $http.get(main.selected)
+    //swapi returns insecure URLs regardless of the protocol used on the request
+    $http.get(main.selected.replace(/^http:\/\//i, 'https://'))
          .then(function(response) {
            main.lines = response.data.opening_crawl.split('\n');
            main.class = 'scroll';
